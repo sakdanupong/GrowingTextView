@@ -115,7 +115,7 @@ open class GrowingTextView: UITextView {
     // Show placeholder
     override open func draw(_ rect: CGRect) {
         super.draw(rect)
-        if text.isEmpty {
+        if text.isEmpty && attributedText.string.isEmpty {
             guard let placeHolder = placeHolder else { return }
             let paragraphStyle = NSMutableParagraphStyle()
             paragraphStyle.alignment = textAlignment
